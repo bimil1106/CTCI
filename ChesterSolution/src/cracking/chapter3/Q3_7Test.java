@@ -1,9 +1,12 @@
 package cracking.chapter3;
 
-import static org.junit.Assert.*;
-import static cracking.chapter3.Q3_7.*;
-
 import org.junit.Test;
+
+import cracking.chapter3.Q3_7.AnimalShelter;
+import cracking.chapter3.Q3_7.AnimalShelter1;
+import cracking.chapter3.Q3_7.AnimalShelter2;
+import cracking.chapter3.Q3_7.Cat;
+import cracking.chapter3.Q3_7.Dog;
 
 public class Q3_7Test {
 
