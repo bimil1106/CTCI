@@ -3,7 +3,7 @@ Review of Cracking the Coding Interview
 
 Welcome
 --------
-This repo is the collaboration of a study group which reviews the book "Cracking the Coding Interview".  We're still making progress on it. 
+This repo is the collaboration of a study group which reviews the book "Cracking the Coding Interview".  We're still making progress on it.  We'll appreciate any comments or complaints on the codes.
 
 Contributors
 -------------
