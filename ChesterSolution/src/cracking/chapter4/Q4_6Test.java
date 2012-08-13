@@ -10,11 +10,28 @@ public class Q4_6Test {
 	static BSTNode node(int value, BSTNode left, BSTNode right) {
 		BSTNode n = new BSTNode();
 		n.value = value;
+		if (left!=null)
+			left.parent = n;
+		if (right!=null)
+			right.parent = n;
 		n.left = left;
-		n.right = right;
+		n.right = right;		
 		return n;
 	}
 
+	/* Sample BST
+	 *            1
+	 *          /   \
+	 *         /     \
+	 *        /       \
+	 *       /         \
+	 *      2           3
+	 *     / \         / \
+	 *    /   \       /   \ 
+	 *   4     5     6     7
+	 *  / \   / \   / \   / \
+	 * 8   9 10 11 13 14 15 16
+	 */
 	BSTNode tree = node(1, 
 						node(2,
 							node(4,
@@ -45,7 +62,7 @@ public class Q4_6Test {
 		next = Q4_6.next(tree.left.right);
 		assertEquals(6, next.value);
 		next = Q4_6.next(tree.right.right);
-		assertEquals(8, next);
+		assertEquals(8, next.value);
 	}
 
 }
