@@ -1,21 +1,11 @@
 package cracking.chapter4;
 
 import static org.junit.Assert.*;
+import static cracking.chapter4.BSTNode.node;
 
 import org.junit.Test;
 
 public class Q4_6Test {
-	static BSTNode node(int value, BSTNode left, BSTNode right) {
-		BSTNode n = new BSTNode();
-		n.value = value;
-		if (left!=null)
-			left.parent = n;
-		if (right!=null)
-			right.parent = n;
-		n.left = left;
-		n.right = right;		
-		return n;
-	}
 
 	/* Sample BST
 	 *            1
