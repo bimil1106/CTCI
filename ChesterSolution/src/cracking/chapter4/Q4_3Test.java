@@ -2,8 +2,6 @@ package cracking.chapter4;
 
 import org.junit.Test;
 
-import cracking.chapter4.Q4_3.BSTNode;
-
 public class Q4_3Test {
 
 	@Test

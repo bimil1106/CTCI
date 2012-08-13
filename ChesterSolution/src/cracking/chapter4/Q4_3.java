@@ -6,14 +6,10 @@ package cracking.chapter4;
  */
 
 public class Q4_3 {
-	static class BSTNode {
-		int value;
-		BSTNode left, right;
-		static BSTNode create(int value) {
-			BSTNode node = new BSTNode();
-			node.value = value;
-			return node;
-		}
+	static BSTNode create(int value) {
+		BSTNode node = new BSTNode();
+		node.value = value;
+		return node;
 	}
 	
 	static BSTNode buildBST(int[] array) {
@@ -24,7 +20,7 @@ public class Q4_3 {
 		if (end<start)
 			return null;
 		int mid = (end-start)/2 + start;
-		BSTNode node = BSTNode.create(array[mid]);
+		BSTNode node = create(array[mid]);
 		node.left = buildBST(array, start, mid-1);
 		node.right = buildBST(array, mid+1, end);
 		return node;

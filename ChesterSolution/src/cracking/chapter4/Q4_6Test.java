@@ -4,8 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import cracking.chapter4.Q4_6.BSTNode;
-
 public class Q4_6Test {
 	static BSTNode node(int value, BSTNode left, BSTNode right) {
 		BSTNode n = new BSTNode();
