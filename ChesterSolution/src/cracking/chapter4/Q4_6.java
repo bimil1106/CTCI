@@ -6,5 +6,22 @@ package cracking.chapter4;
  */
 
 public class Q4_6 {
-
+	static class BSTNode {
+		BSTNode parent, left, right;
+		int value;
+	}
+	
+	static BSTNode next(BSTNode node) {
+		BSTNode parent = node.parent;
+		if (parent==null) // which means root
+			return node.left;
+		else if (node==parent.left)
+			return parent.right;
+		else if (node==parent.right) {
+			BSTNode parentNext = next(parent);
+			if (parentNext!=null)
+				return parentNext.left;
+		}
+		return null;
+	}
 }
