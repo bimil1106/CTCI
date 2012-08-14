@@ -17,7 +17,7 @@ public class Q4_9Test {
 					node(11, null, null)
 				)
 			),
-			node(3,
+			node(-3,
 				node(6,
 					node(12, null, null), 
 					node(13, null, null)
