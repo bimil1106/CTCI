@@ -6,20 +6,19 @@ public class TransposeInPlace {
 	 * output: a1, b1, c1, a2, b2, c2, ..., an, bn, cn
 	 * the transpose should be done in place
 	 */
-	int[] transpose(int[] input) {
+	static int[] transpose(int[] input, int columnSize, int rowSize) {
 		int size = input.length;
-		int columnSize = size / 3;
-		int tmp, x, y, x2, y2, inx2;
+		int tmp, inx2;
 		for (int inx=size; inx>=0; inx--) {
-			x = inx % columnSize;
-			y = inx / columnSize;
-			x2 = y;
-			y2 = x;
-			inx2 = x2 + (y2*3);
+			inx2 = inx / columnSize + (inx % columnSize)*rowSize;
 			tmp = input[inx2];
 			input[inx2] = input[inx];
 			input[inx] = tmp;
 		}
 		return input;
+	}
+	
+	static int next(int inx, int columnSize, int rowSize) {
+		return inx / columnSize + (inx % columnSize)*rowSize;
 	}
 }
