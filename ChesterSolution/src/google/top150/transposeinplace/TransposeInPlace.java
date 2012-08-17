@@ -35,9 +35,10 @@ public class TransposeInPlace {
 		int counter = 0;
 		int inx3, tmp2;
 		int tmp1 = input[inx2];
+		System.out.print(inx2);
 		do {
 			inx3 = TransposeInPlace.next(inx2, width, height);
-			System.out.print(String.format("%d <- %d, ", inx3, inx2));
+			System.out.print(String.format(" -> %d", inx3));
 			tmp2 = input[inx3];
 			input[inx3] = tmp1;
 			tmp1 = tmp2;
