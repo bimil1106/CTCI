@@ -5,28 +5,22 @@ import org.junit.Test;
 public class TransposeInPlaceTest {
 
 	@Test
-	public void testNext() {
-		int width = 7;
-		int height = 8;
-		int inx2, nextCandid;
-		for (int inx=0; inx<width*height; ) {
-			System.out.print("[");
-			inx2 = inx;
-			nextCandid = inx+1;
-			do {
-				inx2=TransposeInPlace.next(inx2, width, height);
-				if (inx2==nextCandid)
-					nextCandid++;
-				if (inx2 < inx) {
-					System.out.print("** Duplicate found!! ==> "+inx2+"**  Drop this loop!!");
-					break;
-				}
-				System.out.print(String.format(" %d ", inx2));
-			} while (inx2!=inx);
-			System.out.println("]");
-			inx = nextCandid;
+	public void testTranspose() {
+		int width = 6;
+		int height = 4;
+		int[] input = { 10, 20, 30, 40, 50, 60,
+						11, 21, 31, 41, 51, 61,
+						12, 22, 32, 42, 52, 62,
+						13, 23, 33, 43, 53, 63};
+		int[] result = TransposeInPlace.transpose(input, width, height);
+		int inx = 0;
+		for (int i=0; i<width; i++) {
+			for (int j=0; j<height; j++) {
+				System.out.print(" " + result[inx++]);
+			}
+			System.out.println();
 		}
-		
+				
 	}
 
 }
