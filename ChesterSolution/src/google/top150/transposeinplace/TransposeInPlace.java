@@ -8,7 +8,7 @@ public class TransposeInPlace {
 	 */
 	static int[] transpose(int[] input, int width, int height) {
 		int processCounter = width * height;
-		int inx2;
+		int inx2; // bro. this variable name looks silly.
 
 		for (int inx=0; inx < width*height && processCounter > 0; inx++) {
 			inx2 = inx;
