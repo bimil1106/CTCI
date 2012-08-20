@@ -1,7 +1,6 @@
 package cracking.chapter4;
 
 import static cracking.chapter4.BSTNode.node;
-import static org.junit.Assert.*;
 
 import org.junit.Test;
 
