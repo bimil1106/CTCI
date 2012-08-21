@@ -42,11 +42,12 @@ public class Q2_1 {
 	public static void removeDupWithoutBuffer(Node head){
 		
 		Node previous = head;
-		Node current = head;
+		Node current;
 		Node keyNode = head;
 		
 		while(keyNode != null){
 			int key = keyNode.data;
+			current = keyNode.next;
 			while(current != null){
 				if(key == current.data){
 					previous.next = current.next;
