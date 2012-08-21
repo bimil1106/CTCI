@@ -1,5 +1,8 @@
 package cracking.chapter3.q3_1;
-
+/*
+ * Q3.1
+ * Describe how you could use a single array to implement three stacks
+ */
 public class ThreeStack<T> {
 	Object[] array;
 	int[] top = {0, 1, 2};
