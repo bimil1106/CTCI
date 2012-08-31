@@ -13,15 +13,15 @@ public class GraphTest {
 		theGraph.addVertex("H"); // 7
 		theGraph.addVertex("I"); // 8
 		
-		theGraph.addEdgeUndirectedGraph(0, 1); // AB
-		theGraph.addEdgeUndirectedGraph(0, 2); // AC
-		theGraph.addEdgeUndirectedGraph(0, 3); // AD
-		theGraph.addEdgeUndirectedGraph(0, 4); // AE
+		theGraph.addUndirectedEdge(0, 1); // AB
+		theGraph.addUndirectedEdge(0, 2); // AC
+		theGraph.addUndirectedEdge(0, 3); // AD
+		theGraph.addUndirectedEdge(0, 4); // AE
 		
-		theGraph.addEdgeUndirectedGraph(1, 5); // BF
-		theGraph.addEdgeUndirectedGraph(5, 7); // FH
-		theGraph.addEdgeUndirectedGraph(3, 6); // DG
-		theGraph.addEdgeUndirectedGraph(6, 8); // GI
+		theGraph.addUndirectedEdge(1, 5); // BF
+		theGraph.addUndirectedEdge(5, 7); // FH
+		theGraph.addUndirectedEdge(3, 6); // DG
+		theGraph.addUndirectedEdge(6, 8); // GI
 		
 		System.out.println("Visiting in bfs:");
 		theGraph.bfs();

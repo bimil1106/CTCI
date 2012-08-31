@@ -3,17 +3,20 @@ package cracking.chapter3;
 import java.util.ArrayList;
 import java.util.Stack;
 
+/* 3.3
+ * Implement a data structure SetOfStacks.
+ * SetOfStacks should be composed of several stacks and should 
+ * create a new stack once the previous one exceeds capacity.
+ * SetOfStacks.push() and SetOfStacks.pop() should behave
+ * identically to a single stack (that is, pop() should return
+ * the same values as it would if there were just a single stack
+ * 
+ * Implement a function popAt(int index) which performs a pop
+ * operation on a specific sub-stack
+ * 
+ * */
+
 public class Q3_3 {
-	/* 3.3
-	 * Implement a data structure SetOfStacks.
-	 * SetOfStacks should be composed of several stacks and should 
-	 * create a new stack once the previous one exceeds capacity.
-	 * SetOfStacks.push() and SetOfStacks.pop() should behave
-	 * identically to a single stack (that is, pop() should return
-	 * the same values as it would if there were just a single stack
-	 * 
-	 * Implement a function popAt(int index) which performs a pop
-	 * operation on a specific sub-stack*/
 	        
 	        public class SetOfStacks {
 	                
@@ -57,6 +60,7 @@ public class Q3_3 {
 	                        return data; 
 	                }
 	                
+	                /* not completed */
 	                public int popAt(int index){
 	                        
 	                        if(stack.empty()) return -1;

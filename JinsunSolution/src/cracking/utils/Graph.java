@@ -12,7 +12,7 @@ public class Graph {
  * */
         
         private int NUMBER_OF_VERTEX = 20;
-        private Vertex [] mVertexList;
+        public Vertex [] mVertexList;
         private int mCount;
         private int [][] mAdjMatrix;
  
@@ -44,10 +44,15 @@ public class Graph {
                 }
         }
         
-        public void addEdgeUndirectedGraph(int start, int end){
+        public void addUndirectedEdge(int start, int end){
                 mAdjMatrix[start][end] = 1;
                 mAdjMatrix[end][start] = 1;
         }
+        
+        public void addDirectedEdge(int start, int end){
+            mAdjMatrix[start][end] = 1;
+        }
+        
         
         public void addVertex(String label){
                 if(mCount >= NUMBER_OF_VERTEX){
@@ -156,4 +161,29 @@ public class Graph {
                         mVertexList[i].isVisited = false;
                 }
         }
+
+		public boolean isRoute(int v1, int v2) {
+			Stack<Integer> s = new Stack<Integer>();
+			
+			mVertexList[v1].isVisited = true;
+			printVertex(v1);
+			s.push(v1);
+			
+			while(!s.isEmpty()){
+				int adjVertex = getAdjUnvisitedVertex(s.peek());
+				if(adjVertex == -1){
+					s.pop();
+				}
+				else{
+					if(adjVertex == v2){
+						return true;
+					}
+					mVertexList[adjVertex].isVisited = true;
+					printVertex(adjVertex);
+					s.push(adjVertex);
+				}
+			}
+			return false;
+		}
 }
+
