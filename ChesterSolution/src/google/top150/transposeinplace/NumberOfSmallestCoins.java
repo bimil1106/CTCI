@@ -19,14 +19,13 @@ public class NumberOfSmallestCoins {
 			return 0;
 		}
 		getNumbers(minCoins, sum - 1, denominators);	
-		int count = Integer.MAX_VALUE;
+		minCoins[sum] = Integer.MAX_VALUE;
 		for (int denominator: denominators) {
-			if (sum >= denominator && minCoins[sum - denominator] < count) {
-				count = minCoins[sum - denominator];
-				System.out.println(String.format("minCoins[%d - %d] = %d", sum, denominator, count));
+			if (sum >= denominator && minCoins[sum - denominator] < minCoins[sum]) {
+				minCoins[sum] = minCoins[sum - denominator] + 1;
+				System.out.println(String.format("minCoins[%d] = %d", sum, minCoins[sum]));
 			}
 		}
-		minCoins[sum] = count + 1;
 		return minCoins[sum];
 	}
 	
