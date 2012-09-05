@@ -74,7 +74,7 @@ public class Q2_4 {
         Node node;
         Node head = sll.buildSimpleLinkedList(data);
         sll.print(head);
-        node = partitionAround(3, head);
+        node = partitionAround(3, sll.buildSimpleLinkedList(data));
         //sll.print(head);
         sll.print(node);
         
