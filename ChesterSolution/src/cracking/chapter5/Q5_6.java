@@ -6,5 +6,8 @@ package cracking.chapter5;
  * so on).
  */
 public class Q5_6 {
-
+	static int swapOddEven(int x) {
+		int mask = Integer.parseInt("101010101010101010101010101010", 2);
+		return ((x & mask) >> 1) | ((x & (mask >> 1)) << 1);
+	}
 }
