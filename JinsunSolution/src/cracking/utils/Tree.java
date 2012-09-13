@@ -2,12 +2,14 @@ package cracking.utils;
 
 public class Tree {
 	public class Node{
-		int data;
-		Node left;
-		Node right;
+		public int data;
+		public Node left;
+		public Node right;
 		
 		public Node(int data){
 			this.data = data;
+			left = null;
+			right = null;
 		}
 		
 		public void printNode(){
@@ -15,7 +17,7 @@ public class Tree {
 		}
 	}
 	
-	Node root;
+	public Node root;
 	
 	public Tree(){
 		root = null;
@@ -74,5 +76,24 @@ public class Tree {
 			}			
 		}
 	}
-	
+
+
+	public void printTreeInorder(Node root){
+		
+		if(root != null){
+			printTreeInorder(root.left);
+			System.out.print(root.data + " ");
+			printTreeInorder(root.right);
+		}
+	}
+
+	public void printTreeInorder(){
+		
+		if(root != null){
+			printTreeInorder(root.left);
+			System.out.print(root.data + " ");
+			printTreeInorder(root.right);
+		}
+	}
+
 }
