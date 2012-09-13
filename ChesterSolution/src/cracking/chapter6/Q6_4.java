@@ -1,6 +1,7 @@
 package cracking.chapter6;
 
 /*
+ * Q6.4
  * A bunch of people are living on an island, when a visitor comes with a strange
  * order: all blue-eyed people must leave the island as soon as possible.  There will
  * be a flight out at 8:00 pm every evening.  Each person can see everyone else's 
@@ -10,5 +11,5 @@ package cracking.chapter6;
  * people to leave?
  */
 public class Q6_4 {
-
+	// Refers to https://github.com/violkim/CTCI/wiki/Notes-on-Q6.4
 }
